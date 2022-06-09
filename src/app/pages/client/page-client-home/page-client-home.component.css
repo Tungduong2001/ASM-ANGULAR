@@ -1,0 +1,18 @@
+.section{
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+.home-item{
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.price-item{
+    margin-left: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+.name-item{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}

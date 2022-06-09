@@ -1,0 +1,57 @@
+<div class="header">
+    <div class="headertop_desc">
+        <div class="account_desc">
+            <ul>
+                <li *ngIf="!getLocalstorage()"><a routerLink="/signin">Login</a></li>
+                <li class="dropdown" *ngIf="getLocalstorage()">
+                    <a class="dropbtn">{{getLocalstorage().user.name}}</a>
+                    <div class="dropdown-content">
+                        <a (click)="onLogout()">Logout</a>
+                    </div>
+                </li>
+                <li><a routerLink="/cart">Cart</a></li>
+                <li><a routerLink="/checkout">Checkout</a></li>
+                <li><a href="#">My Account</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="header_top">
+        <div class="logo">
+            <a routerLink="/"><img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/National_Book_Store_2016_logo.svg/1200px-National_Book_Store_2016_logo.svg.png"
+                    alt="" /></a>
+        </div>
+        <div class="cart">
+            <a>Welcome to our Online Store! <span>Cart:</span>
+                <div id="dd" class="wrapper-dropdown-2">
+                    <app-cart-item-quantity></app-cart-item-quantity> item(s) - $0.00
+                    <ul class="dropdown">
+                        <li>you have no items in your Shopping cart</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="header_bottom">
+        <div class="menu">
+            <ul>
+                <li class="active"><a routerLink="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="search_box">
+            <form>
+                <input type="text" value="Search" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+</div>
