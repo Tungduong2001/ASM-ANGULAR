@@ -20,10 +20,11 @@ export class ClientSigninComponent implements OnInit {
     ) {
     this.formSignin=new FormGroup({
       email:new FormControl('',[
-        Validators.required
+        Validators.required,
       ]),
       password:new FormControl('',[
-        Validators.required
+        Validators.required,
+        Validators.minLength(6)
       ])
     })
    }

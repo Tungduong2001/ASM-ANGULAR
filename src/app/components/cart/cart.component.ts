@@ -1,5 +1,5 @@
-import { LocalStogareService } from '../../../services/local-stogare.service';
-import { ProductCart } from '../../../types/Product';
+import { LocalStogareService } from '../../services/local-stogare.service';
+import { ProductCart } from '../../types/Product';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

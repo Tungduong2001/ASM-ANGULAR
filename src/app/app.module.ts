@@ -25,10 +25,11 @@ import { CheckoutPageComponent } from './pages/client/checkout-page/checkout-pag
 import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { CartQuantityComponent } from './components/client/cart/cart.component';
+import { CartQuantityComponent } from './components/cart/cart.component';
 
 import { NgToastModule } from 'ng-angular-popup';
 import { ProductCategoryComponent } from './pages/client/product-category/product-category.component';
+import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ProductCategoryComponent } from './pages/client/product-category/produc
     CheckoutPageComponent,
     CartQuantityComponent,
     ProductCategoryComponent,
+    ShowValidateComponent,
   ],
   imports: [
     BrowserModule,

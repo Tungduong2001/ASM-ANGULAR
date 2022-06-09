@@ -48,13 +48,14 @@
                             formControlName="name">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-
+                    <app-show-validate [field]="formSignup.get('name')" key="Tên"></app-show-validate>
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
                         <span class="label-input100">Email</span>
                         <input class="input100" type="text" name="pass" placeholder="Type your email"
                             formControlName="email">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
+                    <app-show-validate [field]="formSignup.get('email')" key="Email"></app-show-validate>
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
                         <span class="label-input100">Password</span>
@@ -62,6 +63,7 @@
                             formControlName="password">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
+                    <app-show-validate [field]="formSignup.get('password')" key="Password"></app-show-validate>
 
                     <div class="text-right p-t-8 p-b-31">
                         <a href="#">
