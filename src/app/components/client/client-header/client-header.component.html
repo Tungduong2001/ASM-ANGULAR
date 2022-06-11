@@ -4,7 +4,7 @@
             <ul>
                 <li *ngIf="!getLocalstorage()"><a routerLink="/signin">Login</a></li>
                 <li class="dropdown" *ngIf="getLocalstorage()">
-                    <a class="dropbtn">{{getLocalstorage().user.name}}</a>
+                    <a class="dropbtn" routerLink="/admin">{{getLocalstorage().user.name}}</a>
                     <div class="dropdown-content">
                         <a (click)="onLogout()">Logout</a>
                     </div>

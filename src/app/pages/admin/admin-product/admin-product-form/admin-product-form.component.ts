@@ -85,7 +85,6 @@ export class AdminProductFormComponent implements OnInit {
       return this.productService.updateProduct(this.productId, submitData).subscribe((data)=>{
         this.toast.success({detail:'Update thành công'})
         this.router.navigateByUrl('/admin/products')
-      }, err=>{console.log(err);
       })
     }
 

@@ -1,0 +1,11 @@
+.status-true button{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.status-false button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}

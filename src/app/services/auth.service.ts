@@ -20,4 +20,11 @@ export class AuthService {
   signUp(data:Users):Observable<Users>{
     return this.http.post<Users>(`${environment.signup}`, data)
   }
+
+  getUser():Observable<Users[]>{
+    return this.http.get<Users[]>(environment.users)
+  }
+  updateStatus(id:string,data:any):Observable<any>{
+    return this.http.patch(`${environment.users}/${id}`,data)
+  }
 }

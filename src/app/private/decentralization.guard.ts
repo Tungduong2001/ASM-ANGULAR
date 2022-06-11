@@ -16,13 +16,13 @@ export class DecentralizationGuard implements CanActivate {
       }
       alert('Bạn kh có quyền truy cập')
       setTimeout(() => {
-        this.router.navigateByUrl('/signin')
+        this.router.navigateByUrl('/')
       }, 500);
       return false
       }
       alert('Bạn kh có quyền truy cập')
       setTimeout(() => {
-      this.router.navigateByUrl('/signin')
+      this.router.navigateByUrl('/')
       }, 500);
     
     return false

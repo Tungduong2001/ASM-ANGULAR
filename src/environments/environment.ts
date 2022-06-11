@@ -10,7 +10,8 @@ export const environment = {
   products: `${apiUrl}/products`,
   signin: `${apiUrl}/signin`,
   signup: `${apiUrl}/signup`,
-  category:`${apiUrl}/category`
+  category:`${apiUrl}/category`,
+  users:`${apiUrl}/users`
 };
 /*
  * For easier debugging in development mode, you can import the following file

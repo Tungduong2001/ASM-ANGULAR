@@ -1,3 +1,4 @@
+import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
@@ -63,6 +64,15 @@ const routes: Routes = [
           {
             path:'edit/:id',
             component:AdminProductFormComponent
+          }
+        ]
+      },
+      {
+        path:'users',
+        children:[
+          {
+            path:'',
+            component: AdminUserListComponent
           }
         ]
       }

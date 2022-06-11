@@ -36,16 +36,22 @@ export class ClientSigninComponent implements OnInit {
   onSubmit(){
     this.authService.signIn(this.formSignin.value).subscribe(data=>{
       localStorage.setItem('user', JSON.stringify(data))
-      if (this.getLocalstorage().user.role == 1) {
-        this.toast.success({detail:"SUCCESS", summary:'Đăng nhập thành công'})
-        setTimeout(() => {
-          this.router.navigateByUrl('/admin')
-        }, 3000);
+      
+      if(this.getLocalstorage().user.status==true){
+        if (this.getLocalstorage().user.role == 1) {
+          this.toast.success({detail:"SUCCESS", summary:'Đăng nhập thành công'})
+          setTimeout(() => {
+            this.router.navigateByUrl('/admin')
+          }, 3000);
+        }else{
+          this.toast.success({detail:'Đăng nhập thành công'})
+          setTimeout(() => {
+            this.router.navigateByUrl('/')
+          }, 3000);
+        }
       }else{
-        this.toast.success({detail:'Đăng nhập thành công'})
-        setTimeout(() => {
-          this.router.navigateByUrl('/')
-        }, 3000);
+        localStorage.removeItem('user')
+        this.toast.warning({detail:"Tài khoản đã bị ban 10 năm"})
       }
     },()=>{
       this.toast.error({detail:'Đăng nhập thất bại'})

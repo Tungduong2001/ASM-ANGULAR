@@ -74,12 +74,24 @@ Coded by www.creative-tim.com
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/admin/user">
+                        <a routerLink="/admin/users">
                             <i class="nc-icon nc-single-02"></i>
                             <p>User</p>
                         </a>
                     </li>
 
+                    <li>
+                        <a routerLink="/admin/users">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                    <li class="active-pro">
+                        <a routerLink="/signin" (click)="logout()">
+                            <i class="nc-icon nc-spaceship"></i>
+                            <p>LogOut</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

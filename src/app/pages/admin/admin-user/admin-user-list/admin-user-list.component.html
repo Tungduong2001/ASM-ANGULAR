@@ -1,1 +1,40 @@
-<p>admin-user-list works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title"> List User</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="text-primary">
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of users; index as i">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{item.name}}</td>
+                                <td>{{item.email}}</td>
+                                <td>{{item.role==1 ? "Admin": "Member"}}</td>
+                                <td>
+                                    <div class="status-true" *ngIf="item.status==true" (click)="onStatus(item._id!)">
+                                        <button>Active</button>
+                                    </div>
+                                    <div class="status-false" *ngIf="item.status==false" (click)="onStatus(item._id!)">
+                                        <button>Disable</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
