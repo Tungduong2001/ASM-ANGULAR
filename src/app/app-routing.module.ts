@@ -1,3 +1,6 @@
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminCategoryListComponent } from './pages/admin/admin-category/admin-category-list/admin-category-list.component';
 import { ProductCategoryComponent } from './pages/client/product-category/product-category.component';
 import { CheckoutPageComponent } from './pages/client/checkout-page/checkout-page.component';
 import { ClientSignupComponent } from './pages/client/client-signup/client-signup.component';
@@ -40,7 +43,30 @@ const routes: Routes = [
   },
   {
     path:'admin',
-    component: AdminLayoutComponent,canActivate:[DecentralizationGuard]
+    component: AdminLayoutComponent,canActivate:[DecentralizationGuard],
+    children:[
+      {
+        path:'category',
+        component: AdminCategoryListComponent
+      },
+      {
+        path:'products',
+        children:[
+          {
+            path:'',
+            component:AdminProductListComponent
+          },
+          {
+            path:'create',
+            component: AdminProductFormComponent
+          },
+          {
+            path:'edit/:id',
+            component:AdminProductFormComponent
+          }
+        ]
+      }
+    ]
   },
   {
     path:'signin',

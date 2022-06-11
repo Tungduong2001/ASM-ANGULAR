@@ -15,4 +15,13 @@ export class CategoryService {
   getCategories():Observable<categoryType[]>{
     return this.http.get<categoryType[]>(environment.category)
   }
+  createCate(data:categoryType):Observable<categoryType>{
+    return this.http.post<categoryType>(`${environment.category}`,data)
+  }
+  removeCate(id:string):Observable<any>{
+    return this.http.delete(`${environment.category}/${id}`)
+  }
+  updateCategory(id:string,data:categoryType):Observable<categoryType>{
+    return this.http.patch<categoryType>(`${environment.category}/${id}`,data)
+  }
 }

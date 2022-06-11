@@ -27,11 +27,15 @@ export class ProductService {
     return this.http.post<Product>(`${environment.products}`, data)
   }
 
-  updateProduct(id:number|string, data:ProductCreate):Observable<Product>{
-    return this.http.put<Product>(`${environment.products}/${id}`, data)
+  updateProduct(id:string, data:ProductCreate):Observable<Product>{
+    return this.http.patch<Product>(`${environment.products}/${id}`, data)
   }
 
   getProductCategory(id:string):Observable<Product[]>{
     return this.http.get<Product[]>(`${environment.category}/${id}`)
+  }
+
+  updateStatus(id:string,data:any):Observable<any>{
+    return this.http.patch(`${environment.products}/${id}`,data)
   }
 }

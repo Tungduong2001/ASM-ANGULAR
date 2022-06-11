@@ -1,10 +1,11 @@
 export type Product = {
     _id:string,
+    image:string,
     name: string,
     price:number,
     category:string,
-    cost:number,
-    status:string,
+    discount:number,
+    status:Boolean,
     desc: string
 }
 

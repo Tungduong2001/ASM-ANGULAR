@@ -3,7 +3,7 @@ export type Users={
     email:String,
     password:String,
     role:Number,
-    status:String
+    status:Boolean
 }
 
 export type TypeLoginResponse = {
@@ -13,6 +13,6 @@ export type TypeLoginResponse = {
         email:String,
         password:String,
         role:Number,
-        status:String
+        status:Boolean
     }
   }

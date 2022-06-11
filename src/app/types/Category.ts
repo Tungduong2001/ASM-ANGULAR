@@ -1,5 +1,5 @@
 export type categoryType={
     _id?:string,
-    name:string,
-    status:string
+    name?:string,
+    status:Boolean
 }

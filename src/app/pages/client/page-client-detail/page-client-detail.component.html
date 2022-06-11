@@ -7,47 +7,40 @@
             <div class="clear"></div>
         </div>
         <div class="section group">
-            <div class="cont-desc span_1_of_2">
-                <div class="product-details">
-                    <div class="grid images_3_of_2">
-                        <div id="container">
-                            <div id="products_example">
-                                <div id="products">
-                                    <div class="slides_container">
-                                        <a href="#" target="_blank"><img
-                                                src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_217703.jpg"
-                                                alt=" " /></a>
-                                    </div>
+            <div class="product-details">
+                <div class="grid images_3_of_2">
+                    <div id="container">
+                        <div id="products_example">
+                            <div id="products">
+                                <div class="slides_container">
+                                    <a href="#" target="_blank"><img
+                                            src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_217703.jpg"
+                                            alt=" " /></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="desc span_3_of_2">
-                        <h2>{{product.name}} </h2>
-                        <div class="price">
-                            <p>Price: <span>${{product.price}}</span></p>
-                        </div>
-                        <div class="share-desc">
-                            <div style="display: flex; justify-content: center;">
-                                <input style="width: 60px;height: 45px; margin-top: 17px; margin-right: 25px;"
-                                    type="number" min="1" class="form-control cart-value" [value]="cartValue"
-                                    (input)="onChangeCartValue($event)">
-                                <button class="button" (click)="onAddToCart()">Add to
-                                    Cart</button>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="wish-list">
-                            <ul>
-                                <li class="wish"><a href="#">Add to Wishlist</a></li>
-                                <li class="compare"><a href="#">Add to Compare</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
                 </div>
-                <div class="product_desc">
-                    <div id="horizontalTab">
+                <div class="desc span_3_of_2">
+                    <h2>{{product.name}} </h2>
+                    <div class="price">
+                        <p>Price: <span>${{product.price}}</span></p>
+                    </div>
+                    <div class="share-desc">
+                        <div style="display: flex; justify-content: center;">
+                            <input style="width: 60px;height: 45px; margin-top: 17px; margin-right: 25px;" type="number"
+                                min="1" class="form-control cart-value" [value]="cartValue"
+                                (input)="onChangeCartValue($event)">
+                            <button class="button" (click)="onAddToCart()">Add to
+                                Cart</button>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="wish-list">
+                        <ul>
+                            <li class="wish"><a href="#">Add to Wishlist</a></li>
+                            <li class="compare"><a href="#">Add to Compare</a></li>
+                        </ul>
                         <ul class="resp-tabs-list">
                             <li class="fs-2">Product Details</li>
                             <div class="clear"></div>
@@ -57,56 +50,33 @@
                                 <p>{{product.desc}}</p>
                             </div>
                         </div>
-                        <div class="your-review mt-3">
-                            <p class="fs-2">Write Your Own Review?</p>
-                            <form>
-                                <div>
-                                    <span><label>Nickname<span class="red">*</span></label></span>
-                                    <span><input type="text" value=""></span>
-                                </div>
-                                <div><span><label>Summary of Your Review<span class="red">*</span></label></span>
-                                    <span><input type="text" value=""></span>
-                                </div>
-                                <div>
-                                    <span><label>Review<span class="red">*</span></label></span>
-                                    <span><textarea> </textarea></span>
-                                </div>
-                                <div>
-                                    <span><input type="submit" value="SUBMIT REVIEW"></span>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
+                <div class="clear"></div>
             </div>
-            <div class="rightsidebar span_3_of_1">
-                <h2>CATEGORIES</h2>
-                <ul class="side-w3ls">
-                    <li><a href="#">Mobile Phones</a></li>
-                    <li><a href="#">Desktop</a></li>
-                    <li><a href="#">Laptop</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Software</a></li>
-                    <li><a href="#">Sports &amp; Fitness</a></li>
-                    <li><a href="#">Footwear</a></li>
-                    <li><a href="#">Jewellery</a></li>
-                    <li><a href="#">Clothing</a></li>
-                    <li><a href="#">Home Decor &amp; Kitchen</a></li>
-                    <li><a href="#">Beauty &amp; Healthcare</a></li>
-                    <li><a href="#">Toys, Kids &amp; Babies</a></li>
-                </ul>
-                <div class="subscribe">
-                    <h2>Newsletters Signup</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.......</p>
-                    <div class="signup">
+            <div class="product_desc">
+                <div id="horizontalTab">
+
+                    <div class="your-review mt-3">
+                        <p class="fs-2">Write Your Own Review?</p>
                         <form>
-                            <input type="text" value="E-mail address" onfocus="this.value = '';"
-                                onblur="if (this.value == '') this.value = 'E-mail address';"><input type="submit"
-                                value="Sign up">
+                            <div>
+                                <span><label>Nickname<span class="red">*</span></label></span>
+                                <span><input type="text" value=""></span>
+                            </div>
+                            <div><span><label>Summary of Your Review<span class="red">*</span></label></span>
+                                <span><input type="text" value=""></span>
+                            </div>
+                            <div>
+                                <span><label>Review<span class="red">*</span></label></span>
+                                <span><textarea> </textarea></span>
+                            </div>
+                            <div>
+                                <span><input type="submit" value="SUBMIT REVIEW"></span>
+                            </div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

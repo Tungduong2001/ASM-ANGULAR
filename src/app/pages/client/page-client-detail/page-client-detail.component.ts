@@ -25,10 +25,11 @@ export class PageClientDetailComponent implements OnInit {
     this.product = {
       _id: '',
       name:'',
+      image:'',
       price:0,
       category:'',
-      cost:0,
-      status:'',
+      discount:0,
+      status:true,
       desc: ''
     }
 
