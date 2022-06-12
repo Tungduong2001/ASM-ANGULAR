@@ -1,3 +1,4 @@
+import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
@@ -14,6 +15,7 @@ import { PageClientDetailComponent } from './pages/client/page-client-detail/pag
 import { PageClientHomeComponent } from './pages/client/page-client-home/page-client-home.component';
 import { CartPageComponent } from './pages/client/cart-page/cart-page.component';
 import { DecentralizationGuard } from './private/decentralization.guard';
+import { SearchComponent } from './pages/client/search/search.component';
 
 const routes: Routes = [
   {
@@ -39,6 +41,10 @@ const routes: Routes = [
       {
         path:'category/:id',
         component:ProductCategoryComponent
+      },
+      {
+        path:'search',
+        component:SearchComponent
       }
     ],
   },
@@ -48,7 +54,16 @@ const routes: Routes = [
     children:[
       {
         path:'category',
-        component: AdminCategoryListComponent
+        children:[
+          {
+            path:'',
+            component: AdminCategoryListComponent,
+          },
+          {
+            path:'create',
+            component: AdminCategoryFormComponent
+          }
+        ]
       },
       {
         path:'products',
@@ -86,6 +101,7 @@ const routes: Routes = [
     path:'signup',
     component:ClientSignupComponent
   },
+  
 
 ];
 

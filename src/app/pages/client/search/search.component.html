@@ -1,0 +1,28 @@
+<app-client-navbar></app-client-navbar>
+<div class="content">
+    <div class="content_top">
+        <div class="heading">
+            <h3>Books</h3>
+        </div>
+        <div class="see">
+            <p><a href="#">See all Products</a></p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section">
+        <div class="home-item" *ngFor="let item of products">
+            <a routerLink="/detail/{{item._id}}"><img
+                    src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_217703.jpg" alt="" /></a>
+            <h3 class="name-item">{{item.name}}</h3>
+            <div class="price-details">
+                <div class="price-number">
+                    <p><span class="price-item">{{item.price}}</span></p>
+                </div>
+                <div class="add-cart">
+                    <h4><a href="#">Add to Cart</a></h4>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

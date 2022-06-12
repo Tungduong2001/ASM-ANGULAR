@@ -38,12 +38,14 @@ export class AdminCategoryListComponent implements OnInit {
   onGetCategory(){
     this.categoryService.getCategories().subscribe((data)=>{
       this.category = data
+      
     })
   }
   onRemove(id:string){
     const confirmRemove = confirm("Bạn có muốn xóa không?")
     if (confirmRemove) {
       this.categoryService.removeCate(id).subscribe(()=>{
+        this.toast.success({detail:`Xóa thành công `})
         this.onGetCategory()
       })
     }

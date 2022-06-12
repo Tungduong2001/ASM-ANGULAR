@@ -18,10 +18,13 @@ export class ProductCategoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cateid = this.activateRoute.snapshot.params['id']
-    this.productService.getProductCategory(this.cateid).subscribe(data=>{
-      this.productCategory= data
-    })
+    this.getProducts()
   }
-
+  getProducts(){
+    this.cateid = this.activateRoute.snapshot.params['id']
+      this.productService.getProductCategory(this.cateid).subscribe(data=>{
+        this.productCategory= data
+        this.getProducts()
+      })
+  }
 }

@@ -1,3 +1,7 @@
+import { Router } from '@angular/router';
+import { NgToastModule, NgToastService } from 'ng-angular-popup';
+import { CategoryService } from './../../../../services/category.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminCategoryFormComponent implements OnInit {
 
-  constructor() { }
+  categoryForm: FormGroup;
+
+  constructor(
+    private categoryService: CategoryService,
+    private toast :NgToastService,
+    private router: Router
+  ) { 
+    this.categoryForm = new FormGroup({
+      name: new FormControl('',[
+        Validators.required,
+      ])
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(){
+  
+    this.categoryService.createCate(this.categoryForm.value).subscribe(data=>{
+      this.toast.success({detail:'Thêm sản phẩm thành công'})
+      // this.router.navigateByUrl('/admin/category')
+    })
+  }
 }

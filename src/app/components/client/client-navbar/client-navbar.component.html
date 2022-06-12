@@ -3,7 +3,7 @@
         <div class="categories">
             <ul>
                 <h3>Categories</h3>
-                <li *ngFor="let item of category"><a href="/category/{{item._id}}">{{item.name}}</a></li>
+                <li *ngFor="let item of category"><a routerLink="/category/{{item._id}}">{{item.name}}</a></li>
 
             </ul>
         </div>

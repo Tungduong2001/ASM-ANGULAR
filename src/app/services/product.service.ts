@@ -38,4 +38,8 @@ export class ProductService {
   updateStatus(id:string,data:any):Observable<any>{
     return this.http.patch(`${environment.products}/${id}`,data)
   }
+
+  search(key:string):Observable<Product[]>{
+    return this.http.get<Product[]>(`${environment.search}?q=${key}`)
+  }
 }

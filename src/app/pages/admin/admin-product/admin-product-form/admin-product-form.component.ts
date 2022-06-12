@@ -27,7 +27,6 @@ export class AdminProductFormComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(32),
-        // this.onValidateNameHasProduct
       ]),
       image: new FormControl('', [
         Validators.required,
@@ -68,20 +67,12 @@ export class AdminProductFormComponent implements OnInit {
       })
     }
   }
-  
-  // onValidateNameHasProduct(control: AbstractControl): ValidationErrors | null{
-  //   const {value} = control
-
-  //   if(!value.includes('product')){
-  //     return {hasProductError: true};
-  //   }
-  //   return null
-  // }
+ 
 
   onSubmit(){
     const submitData = this.productForm.value
 
-    if(this.productId !=='' || this.productId !== undefined ){
+    if(this.productId !== undefined ){
       return this.productService.updateProduct(this.productId, submitData).subscribe((data)=>{
         this.toast.success({detail:'Update thành công'})
         this.router.navigateByUrl('/admin/products')

@@ -30,6 +30,7 @@ import { CartQuantityComponent } from './components/cart/cart.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { ProductCategoryComponent } from './pages/client/product-category/product-category.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
+import { SearchComponent } from './pages/client/search/search.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ShowValidateComponent } from './components/show-validate/show-validate.
     CartQuantityComponent,
     ProductCategoryComponent,
     ShowValidateComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ProductService } from './../../../services/product.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { CategoryService } from 'src/app/services/category.service';
 import { categoryType } from 'src/app/types/Category';
 
@@ -8,12 +10,15 @@ import { categoryType } from 'src/app/types/Category';
   styleUrls: ['./client-navbar.component.css']
 })
 export class ClientNavbarComponent implements OnInit {
-
+  idcate:string
   category: categoryType[]
   constructor(
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private router: Router,
+    private activeRouter: ActivatedRoute,
   ) {
     this.category=[]
+    this.idcate=''
    }
 
   ngOnInit(): void {
@@ -21,9 +26,8 @@ export class ClientNavbarComponent implements OnInit {
   }
   getCategory(){
     this.categoryService.getCategories().subscribe(data=>{
-      this.category= data
-      console.log(this.category);
-      
+      this.category= data.filter(item=>item.status==true)
     })
   }
+  
 }
