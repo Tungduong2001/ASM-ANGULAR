@@ -29,10 +29,9 @@ export class AdminCategoryFormComponent implements OnInit {
   }
 
   onSubmit(){
-  
     this.categoryService.createCate(this.categoryForm.value).subscribe(data=>{
       this.toast.success({detail:'Thêm sản phẩm thành công'})
-      // this.router.navigateByUrl('/admin/category')
+      this.router.navigateByUrl('/admin/category')
     })
   }
 }

@@ -12,7 +12,9 @@ export const environment = {
   signup: `${apiUrl}/signup`,
   category:`${apiUrl}/category`,
   users:`${apiUrl}/users`,
-  search:`${apiUrl}/search`
+  search:`${apiUrl}/search`,
+  orders:`${apiUrl}/orders`,
+  ordersDetail:`${apiUrl}/orderDetail`
 };
 /*
  * For easier debugging in development mode, you can import the following file

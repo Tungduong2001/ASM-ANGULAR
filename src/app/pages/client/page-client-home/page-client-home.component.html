@@ -11,8 +11,7 @@
     </div>
     <div class="section">
         <div class="home-item" *ngFor="let item of products">
-            <a routerLink="/detail/{{item._id}}"><img
-                    src="https://cdn0.fahasa.com/media/catalog/product/i/m/image_217703.jpg" alt="" /></a>
+            <a routerLink="/detail/{{item._id}}"><img src="{{item.image}}" alt="" /></a>
             <h3 class="name-item">{{item.name}}</h3>
             <div class="price-details">
                 <div class="price-number">

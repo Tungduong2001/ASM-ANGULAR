@@ -31,6 +31,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { ProductCategoryComponent } from './pages/client/product-category/product-category.component';
 import { ShowValidateComponent } from './components/show-validate/show-validate.component';
 import { SearchComponent } from './pages/client/search/search.component';
+import { OrderSuccessComponent } from './pages/client/order-success/order-success.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SearchComponent } from './pages/client/search/search.component';
     ProductCategoryComponent,
     ShowValidateComponent,
     SearchComponent,
+    OrderSuccessComponent,
   ],
   imports: [
     BrowserModule,

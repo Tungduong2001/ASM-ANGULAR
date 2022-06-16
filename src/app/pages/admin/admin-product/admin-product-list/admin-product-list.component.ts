@@ -28,11 +28,11 @@ export class AdminProductListComponent implements OnInit {
   }
 
   onStatus(id:string){
-    this.product.map(items=>{
-      if (items._id==id) {
-        items.status = !items.status
-        this.productService.updateStatus(id,{status:items.status}).subscribe(()=>{
-          this.toast.success({detail:`Đã đổi trạng thái thành ${items.status==true?"Active":"Disable"}`})
+    this.product.map(item=>{
+      if (item._id==id) {
+        item.status = !item.status
+        this.productService.updateStatus(id,{status:item.status}).subscribe(()=>{
+          this.toast.success({detail:`Đã đổi trạng thái thành ${item.status==true?"Active":"Disable"}`})
         })
       }
     })

@@ -21,10 +21,13 @@ export class ProductCategoryComponent implements OnInit {
     this.getProducts()
   }
   getProducts(){
-    this.cateid = this.activateRoute.snapshot.params['id']
-      this.productService.getProductCategory(this.cateid).subscribe(data=>{
-        this.productCategory= data
-        this.getProducts()
+    this.activateRoute.paramMap.subscribe(params=>{
+      this.cateid = params.get('id') as string
+      if(this.cateid){
+        this.productService.getProductCategory(this.cateid).subscribe(data=>{
+          this.productCategory= data
       })
-  }
+    }
+  })
+}
 }

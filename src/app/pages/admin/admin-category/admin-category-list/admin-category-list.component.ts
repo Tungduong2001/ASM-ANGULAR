@@ -26,11 +26,11 @@ export class AdminCategoryListComponent implements OnInit {
   }
 
   onStatus(id:string){
-    this.category.map(items=>{
-      if (items._id==id) {
-        items.status = !items.status
-        this.categoryService.updateCategory(id,{status:items.status}).subscribe(()=>{
-          this.toast.success({detail:`Đã đổi trạng thái thành ${items.status==true?"Active":"Disable"}`})
+    this.category.map(item=>{
+      if (item._id==id) {
+        item.status = !item.status
+        this.categoryService.updateCategory(id,{status:item.status}).subscribe(()=>{
+          this.toast.success({detail:`Đã đổi trạng thái thành ${item.status==true?"Active":"Disable"}`})
         })
       }
     })
@@ -38,7 +38,6 @@ export class AdminCategoryListComponent implements OnInit {
   onGetCategory(){
     this.categoryService.getCategories().subscribe((data)=>{
       this.category = data
-      
     })
   }
   onRemove(id:string){

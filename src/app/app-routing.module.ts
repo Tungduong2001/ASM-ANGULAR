@@ -1,3 +1,4 @@
+import { OrderSuccessComponent } from './pages/client/order-success/order-success.component';
 import { AdminCategoryFormComponent } from './pages/admin/admin-category/admin-category-form/admin-category-form.component';
 import { AdminUserListComponent } from './pages/admin/admin-user/admin-user-list/admin-user-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
@@ -45,6 +46,10 @@ const routes: Routes = [
       {
         path:'search',
         component:SearchComponent
+      },
+      {
+        path:'orders-success',
+        component:OrderSuccessComponent
       }
     ],
   },
